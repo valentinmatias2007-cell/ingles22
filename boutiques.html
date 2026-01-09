@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique Hotels - Valle de Bravo</title>
+<style>
+body{margin:0;font-family:"Poppins",sans-serif;background:#f8f8f8;color:#333;}
+header{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:15px 40px;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+header h1{color:#e53935;font-size:26px;}
+nav a{margin:0 15px;text-decoration:none;color:#333;font-weight:500;}
+nav a:hover{color:#e53935;}
+.hero{position:relative;height:60vh;overflow:hidden;}
+.hero img{width:100%;height:100%;object-fit:cover;}
+.hero-text{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.6);color:#fff;padding:15px 25px;border-radius:12px;font-size:30px;}
+section{padding:60px 80px;text-align:center;}
+h2{color:#d32f2f;font-size:32px;margin-bottom:40px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,0.1);transition:transform 0.3s;}
+.card:hover{transform:translateY(-8px);}
+.card img{width:100%;height:200px;object-fit:cover;}
+.card h3{margin:15px;color:#e53935;font-size:20px;}
+.card p{margin:0 15px 20px;color:#555;}
+.price{color:#2e7d32;font-weight:700;margin-bottom:20px;}
+.btn{display:inline-block;background:linear-gradient(135deg,#e53935,#ff7043);color:#fff;padding:10px 20px;border-radius:30px;text-decoration:none;font-weight:600;}
+footer{background:#222;color:#fff;text-align:center;padding:20px;margin-top:40px;}
+</style>
+</head>
+<body>
+<header>
+<h1>Valle de Bravo</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="hospedaje.html">Accommodation</a>
+<a href="cosas.html">Things to Do</a>
+<a href="cultura.html">Culture</a>
+<a href="historia.html">History</a>
+<a href="ubicacion.html">Location</a>
+</nav>
+</header>
+
+<div class="hero">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80">
+<div class="hero-text">Elegant Boutique Hotels ✨</div>
+</div>
+
+<section>
+<h2>Luxury & Style</h2>
+<div class="grid">
+<div class="card">
+<img src="https://tse4.mm.bing.net/th/id/OIP.p4C2m7pp67510kjBJ_R_NwHaEc?rs=1&pid=ImgDetMain&o=7&rm=3">
+<h3>Danzaluna Boutique Hotel</h3>
+<p>Romantic atmosphere near the lake, ideal for couples and relaxation.</p>
+<p class="price">$220 / night</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1600&q=80">
+<h3>Casa Chichipicas</h3>
+<p>Contemporary design and warm hospitality in a natural setting.</p>
+<p class="price">$190 / night</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1600&q=80">
+<h3>Hotel Cinco Rodavento</h3>
+<p>Chic urban style with rooftop pool and exclusive restaurant.</p>
+<p class="price">$240 / night</p>
+</div>
+</div>
+<br>
+<a href="hospedaje.html" class="btn">⬅ Back to Accommodation</a>
+</section>
+<footer>© 2026 Valle de Bravo - Tourism and Lodging</footer>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Things to Do - Tepotzotlán</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#f8f8f8;
+  color:#333;
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  box-shadow:0 2px 5px rgba(0,0,0,.1);
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+header h1{
+  color:#8d6e63;
+  font-size:26px;
+  font-weight:700;
+}
+
+nav a{
+  margin:0 12px;
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+  transition:color .3s ease;
+}
+nav a:hover{color:#8d6e63}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:60vh;
+  overflow:hidden;
+}
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(70%);
+}
+.hero-text{
+  position:absolute;
+  bottom:25px;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(0,0,0,.55);
+  color:#fff;
+  padding:15px 30px;
+  border-radius:12px;
+  font-size:32px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+/* SECTION */
+section{
+  padding:70px 80px;
+  text-align:center;
+}
+
+h2{
+  color:#8d6e63;
+  margin-bottom:45px;
+  font-size:32px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+/* CARD */
+.card{
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);
+  transition:transform .3s, box-shadow .3s;
+}
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+.card img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+}
+.card h3{
+  margin:15px;
+  color:#8d6e63;
+  font-size:20px;
+}
+.card p{
+  margin:0 15px 20px;
+  font-size:14px;
+  color:#555;
+}
+
+/* SCROLL ANIMATION */
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:all 1s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* FOOTER */
+footer{
+  background:#222;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  margin-top:60px;
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  section{padding:50px 25px}
+  .hero-text{font-size:24px;padding:12px 22px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Tepotzotlán</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="hospedaje.html">Accommodation</a>
+    <a href="things.html">Things to Do</a>
+    <a href="culture.html">Culture</a>
+    <a href="history.html">History</a>
+    <a href="location.html">Location</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Museo_Nacional_del_Virreinato.jpg" alt="Things to do in Tepotzotlán">
+  <div class="hero-text">Culture, Nature & Traditions 🌿</div>
+</div>
+
+<section>
+  <h2 class="reveal">Must-Do Experiences</h2>
+
+  <div class="grid">
+    <div class="card reveal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Tepotzotlan_Museo_del_Virreinato.jpg">
+      <h3>National Museum of the Viceroyalty</h3>
+      <p>Explore one of Mexico’s most important colonial museums, located in a former Jesuit college.</p>
+    </div>
+
+    <div class="card reveal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Arcos_del_Sitio_Tepotzotlan.jpg">
+      <h3>Arcos del Sitio</h3>
+      <p>Visit the impressive 18th-century aqueduct surrounded by nature and hiking trails.</p>
+    </div>
+
+    <div class="card reveal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Tepotzotlan_centro.jpg">
+      <h3>Historic Downtown Walk</h3>
+      <p>Stroll through cobblestone streets, local markets, and traditional Mexican architecture.</p>
+    </div>
+
+    <div class="card reveal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Arcos_del_Sitio_senderismo.jpg">
+      <h3>Hiking & Nature</h3>
+      <p>Enjoy outdoor activities and scenic views around the Arcos del Sitio eco-park.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+© 2026 Tepotzotlán – Tourism & Culture
+</footer>
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
+    }
+  });
+},{threshold:0.15});
+
+reveals.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>

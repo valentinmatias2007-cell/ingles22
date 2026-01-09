@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History - Tepotzotlán</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#f4f4f9;
+  color:#333;
+  line-height:1.7;
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+header h1{
+  color:#8d6e63;
+  font-weight:700;
+  font-size:26px;
+  letter-spacing:1px;
+}
+
+nav a{
+  margin:0 12px;
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+  transition:color .3s ease;
+}
+nav a:hover{color:#8d6e63}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:60vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(70%);
+}
+
+.hero-text{
+  position:absolute;
+  color:#fff;
+  font-size:38px;
+  font-weight:700;
+  background:rgba(0,0,0,.45);
+  padding:20px 35px;
+  border-radius:12px;
+  text-align:center;
+  backdrop-filter:blur(4px);
+  letter-spacing:1px;
+}
+
+/* SECTION */
+section{
+  max-width:1000px;
+  margin:80px auto;
+  background:#fff;
+  padding:50px 60px;
+  border-radius:16px;
+  box-shadow:0 8px 25px rgba(0,0,0,.1);
+  animation:fadeIn 1.5s ease;
+}
+
+section h2{
+  text-align:center;
+  color:#8d6e63;
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:25px;
+  letter-spacing:1px;
+}
+
+section p{
+  font-size:16px;
+  margin-bottom:20px;
+  color:#555;
+}
+
+/* TIMELINE */
+.timeline{
+  margin-top:40px;
+  border-left:3px solid #8d6e63;
+  padding-left:25px;
+}
+
+.timeline-item{
+  margin-bottom:30px;
+}
+
+.timeline-item h3{
+  color:#8d6e63;
+  font-size:18px;
+  margin-bottom:8px;
+}
+
+.timeline-item p{
+  font-size:15px;
+  color:#444;
+}
+
+/* FOOTER */
+footer{
+  background:#222;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  margin-top:60px;
+  font-size:14px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  section{padding:30px 25px}
+  .hero-text{font-size:28px;padding:15px 25px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Tepotzotlán</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="hospedaje.html">Accommodation</a>
+    <a href="things.html">Things to Do</a>
+    <a href="culture.html">Culture</a>
+    <a href="history.html">History</a>
+    <a href="location.html">Location</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <img src="https://www.caminoreal.com/storage/app/uploads/public/654/cf4/ab0/654cf4ab0ab20556490382.png">
+  <div class="hero-text">A place where history comes alive 📜</div>
+</div>
+
+<section>
+  <h2>The Story of Tepotzotlán</h2>
+
+  <p>
+    Tepotzotlán was founded in the early 16th century and quickly became an important
+    religious and cultural center during the colonial period. Its strategic location
+    along historic trade routes contributed to its growth and significance.
+  </p>
+
+  <p>
+    The town is best known for the former Jesuit college of San Francisco Javier,
+    now home to the National Museum of the Viceroyalty, one of the most important
+    colonial museums in Mexico.
+  </p>
+
+  <p>
+    Over time, Tepotzotlán has preserved its architectural beauty, traditions,
+    and peaceful atmosphere, earning recognition as a “Pueblo Mágico” and
+    attracting visitors from around the world.
+  </p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>1580 – Jesuit Foundation</h3>
+      <p>The Jesuits established a major educational and religious complex that shaped the town’s identity.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>1767 – Jesuit Expulsion</h3>
+      <p>The expulsion of the Jesuits marked a turning point, transforming the site into a historic landmark.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>2002 – Pueblo Mágico</h3>
+      <p>Tepotzotlán was officially recognized as a Pueblo Mágico for its historical and cultural importance.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+© 2026 Tepotzotlán – Tourism & Culture
+</footer>
+
+</body>
+</html>

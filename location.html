@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Location - Tepotzotlán</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#f4f4f9;
+  color:#333;
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+header h1{
+  color:#8d6e63;
+  font-weight:700;
+  font-size:26px;
+  letter-spacing:1px;
+}
+
+nav a{
+  margin:0 12px;
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+  transition:color .3s ease;
+}
+nav a:hover{color:#8d6e63}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:60vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(70%);
+}
+
+.hero-text{
+  position:absolute;
+  color:#fff;
+  font-size:36px;
+  font-weight:700;
+  background:rgba(0,0,0,.45);
+  padding:20px 35px;
+  border-radius:12px;
+  text-align:center;
+  backdrop-filter:blur(4px);
+  letter-spacing:1px;
+}
+
+/* SECTION */
+section{
+  text-align:center;
+  padding:80px 60px;
+  max-width:1100px;
+  margin:auto;
+}
+
+section h2{
+  color:#8d6e63;
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:25px;
+  letter-spacing:1px;
+}
+
+section p{
+  font-size:17px;
+  color:#555;
+  margin-bottom:40px;
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.6;
+}
+
+/* MAP */
+iframe{
+  width:100%;
+  height:450px;
+  border:0;
+  border-radius:16px;
+  box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+/* FOOTER */
+footer{
+  background:#222;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  margin-top:60px;
+  font-size:14px;
+}
+
+/* SCROLL ANIMATION */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 1.2s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  section{padding:40px 25px}
+  .hero-text{font-size:26px;padding:15px 25px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Tepotzotlán</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="hospedaje.html">Accommodation</a>
+    <a href="things.html">Things to Do</a>
+    <a href="culture.html">Culture</a>
+    <a href="history.html">History</a>
+    <a href="location.html">Location</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <img src="https://th.bing.com/th/id/R.aba61618d9507b3e805232e923369f24?rik=TDNLXHlj4z2ePA&pid=ImgRaw&r=0">
+  <div class="hero-text">Find your way to history 📍</div>
+</div>
+
+<section>
+  <h2 class="reveal">How to Get There</h2>
+
+  <p class="reveal">
+    Tepotzotlán is located in the State of Mexico, about 45 minutes north of Mexico City.
+    It is easily accessible via the México–Querétaro highway.
+    This historic town is famous for its colonial architecture, cultural heritage,
+    and the National Museum of the Viceroyalty.
+  </p>
+
+  <iframe class="reveal"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.6403755604045!2d-99.22527708509042!3d19.713606686986682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d220da7c14d3cb%3A0x5d5a2cb73fdcb8a2!2sTepotzotl%C3%A1n%2C%20M%C3%A9x.!5e0!3m2!1sen!2smx!4v1700000000000"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</section>
+
+<footer>
+© 2026 Tepotzotlán – Tourism & Culture
+</footer>
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
+    }
+  });
+},{threshold:0.15});
+
+reveals.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>

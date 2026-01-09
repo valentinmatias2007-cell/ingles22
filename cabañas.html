@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabañas en Valle de Bravo</title>
+  <style>
+    body { margin: 0; font-family: "Poppins", sans-serif; background: #f3f7f2; color: #333; }
+    header { background: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; }
+    header h1 { color: #4caf50; font-size: 24px; font-weight: bold; }
+    nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: 500; }
+    nav a:hover { color: #4caf50; }
+    h2 { text-align: center; color: #2e7d32; margin: 40px 0; font-size: 32px; text-transform: uppercase; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 0 60px 60px; }
+    .card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: 0.3s; }
+    .card:hover { transform: translateY(-8px); }
+    .card img { width: 100%; height: 200px; object-fit: cover; }
+    .card-content { padding: 20px; }
+    .card h3 { color: #388e3c; margin-bottom: 10px; }
+    .card p { color: #555; margin-bottom: 15px; }
+    .price { font-size: 18px; color: #2e7d32; font-weight: bold; margin-bottom: 15px; }
+    .btn { display: inline-block; background: linear-gradient(135deg, #43a047, #81c784); color: #fff; padding: 10px 20px; border-radius: 25px; text-decoration: none; transition: 0.3s; }
+    .btn:hover { background: linear-gradient(135deg, #2e7d32, #66bb6a); }
+    footer { background: #222; color: #fff; text-align: center; padding: 15px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Valle de Bravo</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="hospedaje.html">Hospedaje</a>
+    <a href="cosas.html">Cosas que hacer</a>
+    <a href="cultura.html">Cultura</a>
+    <a href="historia.html">Historia</a>
+    <a href="ubicacion.html">Ubicación</a>
+  </nav>
+</header>
+
+<h2>Cabañas en el Bosque</h2>
+<div class="grid">
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1600585154154-8f8d6f5c094a?auto=format&fit=crop&w=1600&q=80">
+    <div class="card-content">
+      <h3>Cabaña Los Pinos</h3>
+      <p>Rústica y acogedora, rodeada de naturaleza.</p>
+      <div class="price">$1,800 MXN / noche</div>
+      <a href="#" class="btn">Reservar</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1601913453119-1e894b3e6c51?auto=format&fit=crop&w=1600&q=80">
+    <div class="card-content">
+      <h3>Cabañas del Lago</h3>
+      <p>Vista directa al lago y chimenea interior.</p>
+      <div class="price">$2,200 MXN / noche</div>
+      <a href="#" class="btn">Reservar</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1600&q=80">
+    <div class="card-content">
+      <h3>Cabaña Encinos</h3>
+      <p>Ideal para grupos y familias, con terraza y asador.</p>
+      <div class="price">$2,000 MXN / noche</div>
+      <a href="#" class="btn">Reservar</a>
+    </div>
+  </div>
+</div>
+
+<footer>© 2026 Valle de Bravo - Turismo y Hospedaje</footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cabins - Valle de Bravo</title>
+<style>
+body{margin:0;font-family:"Poppins",sans-serif;background:#f8f8f8;color:#333;}
+header{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:15px 40px;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+header h1{color:#e53935;font-size:26px;}
+nav a{margin:0 15px;text-decoration:none;color:#333;font-weight:500;}
+nav a:hover{color:#e53935;}
+.hero{position:relative;height:60vh;overflow:hidden;}
+.hero img{width:100%;height:100%;object-fit:cover;}
+.hero-text{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.6);color:#fff;padding:15px 25px;border-radius:12px;font-size:30px;}
+section{padding:60px 80px;text-align:center;}
+h2{color:#d32f2f;font-size:32px;margin-bottom:40px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,0.1);transition:transform 0.3s;}
+.card:hover{transform:translateY(-8px);}
+.card img{width:100%;height:200px;object-fit:cover;}
+.card h3{margin:15px;color:#e53935;font-size:20px;}
+.card p{margin:0 15px 20px;color:#555;}
+.price{color:#2e7d32;font-weight:700;margin-bottom:20px;}
+.btn{display:inline-block;background:linear-gradient(135deg,#e53935,#ff7043);color:#fff;padding:10px 20px;border-radius:30px;text-decoration:none;font-weight:600;}
+footer{background:#222;color:#fff;text-align:center;padding:20px;margin-top:40px;}
+</style>
+</head>
+<body>
+<header>
+<h1>Valle de Bravo</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="hospedaje.html">Accommodation</a>
+<a href="cosas.html">Things to Do</a>
+<a href="cultura.html">Culture</a>
+<a href="historia.html">History</a>
+<a href="ubicacion.html">Location</a>
+</nav>
+</header>
+
+<div class="hero">
+<img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/440749717.jpg?k=83f268be156bdbded33925621e94b30433fe9b2ab892a8e8f1b0e9b010975549&o=&hp=1">
+<div class="hero-text">Cozy Cabins in Valle de Bravo 🌲</div>
+</div>
+
+<section>
+<h2>Nature & Relaxation</h2>
+<div class="grid">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1600&q=80">
+<h3>Los Saucos Cabin</h3>
+<p>Rustic charm surrounded by forest trails and mountain air.</p>
+<p class="price">$95 / night</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80">
+<h3>El Reencuentro Lodge</h3>
+<p>Perfect for couples — hot tub, fireplace, and lake view.</p>
+<p class="price">$120 / night</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1600&q=80">
+<h3>Avándaro Cabins</h3>
+<p>Spacious wooden cabins with gardens and a private BBQ area.</p>
+<p class="price">$150 / night</p>
+</div>
+</div>
+<br>
+<a href="hospedaje.html" class="btn">⬅ Back to Accommodation</a>
+</section>
+<footer>© 2026 Valle de Bravo - Tourism and Lodging</footer>
+</body>
+</html>

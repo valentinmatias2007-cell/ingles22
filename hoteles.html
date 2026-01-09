@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotels - Tepotzotlán</title>
+
+<style>
+body{
+  margin:0;
+  font-family:"Poppins",sans-serif;
+  background:#f8f8f8;
+  color:#333;
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+header h1{
+  color:#8d6e63;
+  font-size:26px;
+  font-weight:700;
+}
+
+nav a{
+  margin:0 15px;
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+  transition:color .3s ease;
+}
+nav a:hover{color:#8d6e63}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:60vh;
+  overflow:hidden;
+}
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.hero-text{
+  position:absolute;
+  bottom:30px;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  padding:15px 25px;
+  border-radius:12px;
+  font-size:30px;
+  font-weight:bold;
+}
+
+/* SECTION */
+section{
+  padding:60px 80px;
+  text-align:center;
+}
+h2{
+  color:#8d6e63;
+  font-size:32px;
+  margin-bottom:40px;
+  text-transform:uppercase;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+/* CARD */
+.card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  transition:transform .3s;
+}
+.card:hover{transform:translateY(-8px)}
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+.card h3{
+  margin:15px;
+  color:#8d6e63;
+  font-size:20px;
+}
+.card p{
+  margin:0 15px 20px;
+  color:#555;
+}
+.price{
+  color:#2e7d32;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  background:linear-gradient(135deg,#8d6e63,#bcaaa4);
+  color:#fff;
+  padding:10px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* FOOTER */
+footer{
+  background:#222;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+}
+
+/* SCROLL ANIMATION */
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:all 1s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  section{padding:50px 8%}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Tepotzotlán</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="hospedaje.html">Accommodation</a>
+    <a href="things.html">Things to Do</a>
+    <a href="culture.html">Culture</a>
+    <a href="history.html">History</a>
+    <a href="location.html">Location</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <img src="https://www.playasmexico.com.mx/wp-content/uploads/2023/03/3-1.jpg" alt="">
+  <div class="hero-text">Hotels in Tepotzotlán 🏨</div>
+</div>
+
+<section>
+  <h2 class="reveal">Comfort & Tradition</h2>
+
+  <div class="grid">
+    <div class="card reveal">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" alt="Posada Arny">
+      <h3>Posada Arny</h3>
+      <p>Cozy inn near the National Museum of the Viceroyalty, charming and affordable.</p>
+      <p class="price">$70 / night</p>
+    </div>
+
+    <div class="card reveal">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/448314055.jpg?k=46aa7166a74c4a22ed3ed502557efe787da62bdc0a0f81b0c82a22e5eefae42d&o=&hp=1e">
+      <h3>Posada del Fraile</h3>
+      <p>Quiet, traditional lodging with local character.</p>
+      <p class="price">$90 / night</p>
+    </div>
+
+    <div class="card reveal">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.Gf94czDSGgruCfhywCAqyAHaEw?rs=1&pid=ImgDetMain&o=7&rm=3">
+      <h3>Finca Las Hortensias</h3>
+      <p>Relaxing hotel with garden and pool, perfect for a weekend getaway.</p>
+      <p class="price">$120 / night</p>
+    </div>
+
+    <div class="card reveal">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.9T9n4VsVjsJ9Gahi5FFlWwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3">
+      <h3>Mansion Tepotzotlán</h3>
+      <p>Elegant boutique hotel with traditional Mexican atmosphere.</p>
+      <p class="price">$140 / night</p>
+    </div>
+
+    <div class="card reveal">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.qDBXractpjE2_kThh5-aDQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3">
+      <h3>Hotel Las Fuentes</h3>
+      <p>Comfortable rooms close to downtown Tepotzotlán.</p>
+      <p class="price">$80 / night</p>
+    </div>
+  </div>
+
+  <br>
+  <a href="index.html" class="btn reveal">⬅ Back to Home</a>
+</section>
+
+<footer>
+  © 2026 Tepotzotlán – Tourism & Culture
+</footer>
+
+<script>
+window.addEventListener("scroll",()=>{
+  document.querySelectorAll(".reveal").forEach(el=>{
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add("active");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+
